@@ -5,58 +5,300 @@ const convFlow = [
     id: "greetings",
     response: {
       messages: [
-        "Hello visitor, welcome to my site, what can I help you with?",
-        "You can select from any of the below buttons"
+        "Hi there! Welcome to the digital store.",
+        "You can select from below list of options.",
       ],
       buttons: [
         {
-          state: "howOld",
-          display: "how old are you?"
+          state: "mainHelp",
+          display: "How can we help you?",
         },
         {
-          state: "blogAbout",
-          display: "What is your blog about?"
+          state: "feeling",
+          display: "How are you doing?",
+        },
+        {
+          state:"creators",
+          display:"Want to lnow more about my creators?",
         }
-      ]
-    }
+      ],
+    },
   },
   {
-    id: "howOld",
+    id: "feeling",
     response: {
       messages: [
-        "I was born in December 1994, I will let you do the math!",
-        "what else do you want to know?"
+        "I am doing great, I was created inhouse with HTML, CSS and JS; all thanks to my creators.",
+        "Take my suggestion, if you are looking for smart phone I can help you.",
       ],
       buttons: [
         {
-          state: "blogAbout",
-          display: "what is your blog about?"
+          state: "mainHelp",
+          display: "I can help you with other things as well",
         },
         {
-          state: "blog",
-          display: "blog"
-        }
-      ]
-    }
+          state: "creators",
+          display: "Tell me more about your creators",
+        },
+        {
+          state: "mobile",
+          display: "Suggest me good Smart Phones",
+        },
+      ],
+    },
   },
   {
-    id: "blogAbout",
+    id: "creators",
     response: {
       messages: [
-        "My blog is about tech and programming, visit it and you can find out!",
-        "what else do you want to know?"
+        "Hello visitor, we made this chatbot to assist you in shopping.",
+        "Trigya Roy, Shrenik Shah & Raj Tiwari. Happy Shopping",
       ],
       buttons: [
         {
-          state: "howOld",
-          display: "How old are you?"
+          state: "mainHelp",
+          display: "Show me the best.",
         },
         {
-          state: "postMore",
-          display: "Why don't you post more?"
-        }
-      ]
-    }
+          state: "feeling",
+          display: "Know more about me.",
+        },
+      ],
+    },
+  },
+  {
+    id: "mainHelp",
+    response: {
+      messages: [
+        "We sell all types of electronic gadgets. What category are you looking for?",
+      ],
+      buttons: [
+        {
+          state: "television",
+          display: "Top Selling TVs",
+        },
+        {
+          state: "mobile",
+          display: "Best Budget Smart Phone",
+        },
+        {
+          state: "earphone",
+          display: "Trending Earphones",
+        },
+      ],
+    },
+  },
+  {
+    id: "television",
+    response: {
+      messages: [
+        "Here are our top selling TV sets.",
+        "Best Quality and Best Rate Guranteed.",
+      ],
+      buttons: [
+        {
+          state: "tv1",
+          display: "RealMe TV 32\"",
+        },
+        {
+          state: "tv2",
+          display: "Mi TV 40\"",
+        },
+        {
+          state: "tv3",
+          display: "Samson TV 55\"",
+        },
+        {
+          state: "mainHelp",
+          display: "All products",
+        },
+      ],
+    },
+  },
+  {
+    id: "tv1",
+    response: {
+      messages: [
+        "RealMe TV 32\"",
+        "Screen: FHD(1920x1080) Speakers:20W ▶",
+      ],
+      buttons: [
+        {
+          state: "television",
+          display: "Go back.",
+        },
+      ],
+    },
+  },
+  {
+    id: "tv2",
+    response: {
+      messages: [
+        "Mi TV 40\"",
+        "Screen: FHD(1920x1080) Speakers:16W ▶",
+      ],
+      buttons: [
+        {
+          state: "television",
+          display: "Go back.",
+        },
+      ],
+    },
+  }, 
+   {
+    id: "tv3",
+    response: {
+      messages: [
+        "Samson TV 55\"",
+        "Screen: 4k(2000x2000) Speakers:30W ▶",
+      ],
+      buttons: [
+        {
+          state: "television",
+          display: "Go back.",
+        },
+      ],
+    },
+  },
+  {
+    id: "mobile",
+    response: {
+      messages: [
+        "Best budget smartphones in the market.",
+        "Top performance & quality camera.",
+      ],
+      buttons: [
+        {
+          state: "mob1",
+          display: "Pineapple 12",
+        },
+        {
+          state: "mob2",
+          display: "Samson Z",
+        },
+        {
+          state: "mob3",
+          display: "OneMinus 2",
+        },
+        {
+          state: "mainHelp",
+          display: "All products.",
+        },
+      ],
+    },
+  },
+  {
+    id: "mob1",
+    response: {
+      messages: [
+        "Pineapple 12",
+        "Cutting edge power, made for gaming.",
+      ],
+      buttons: [
+        {
+          state: "mobile",
+          display: "Show all mobiles.",
+        },
+      ],
+    },
+  },
+  {
+    id: "mob2",
+    response: {
+      messages: [
+        "Samson Z",
+        "No compromise camera, perfect picture always.",
+      ],
+      buttons: [
+        {
+          state: "mobile",
+          display: "Show all mobiles.",
+        },
+      ],
+    },
+  },  
+  {
+    id: "mob3",
+    response: {
+      messages: [
+        "OneMinus 2",
+        "All day battery, 4000mAh",
+      ],
+      buttons: [
+        {
+          state: "mobile",
+          display: "Show all mobiles.",
+        },
+      ],
+    },
+  },
+  {
+    id: "earphone",
+    response: {
+      messages: [
+        "Trending Earphones",
+      ],
+      buttons: [
+        {
+          state: "ep1",
+          display: "Provo21 Wired",
+        },
+        {
+          state: "ep2",
+          display: "Jade TWC",
+        },
+        {
+          state: "ep3",
+          display: "Blu332 Bluetooth",
+        },
+        {
+          state: "mainHelp",
+          display: "All products.",
+        },
+      ],
+    },
+  },
+  {
+    id: "ep1",
+    response: {
+      messages: [
+        "Provo21 Wired, top selling and 5 star rating",
+      ],
+      buttons: [
+        {
+          state: "earphone",
+          display: "Show all trending.",
+        },
+      ],
+    },
+  },
+  {
+    id: "ep2",
+    response: {
+      messages: [
+        "Jade TWC, truly wireless, full day backup.",
+      ],
+      buttons: [
+        {
+          state: "earphone",
+          display: "Show all trending.",
+        },
+      ],
+    },
+  },  
+  {
+    id: "ep3",
+    response: {
+      messages: [
+        "Blu332 Bluetooth",
+      ],
+      buttons: [
+        {
+          state: "earphone",
+          display: "Show all trending.",
+        },
+      ],
+    },
   },
   {
     id: "postMore",
@@ -65,14 +307,14 @@ const convFlow = [
       buttons: [
         {
           state: "howOld",
-          display: "How old are you?"
+          display: "How old are you?",
         },
         {
           state: "postMore",
-          display: "Why don't you post more?"
-        }
-      ]
-    }
+          display: "Why don't you post more?",
+        },
+      ],
+    },
   },
   {
     id: "incomprehension",
@@ -81,11 +323,11 @@ const convFlow = [
       buttons: [
         {
           state: "greetings",
-          display: "greetings"
-        }
-      ]
-    }
-  }
+          display: "greetings",
+        },
+      ],
+    },
+  },
 ];
 const bot = new Chat(convFlow);
 const timeDelay = 400;
@@ -98,7 +340,7 @@ function scrollToBottom() {
   chatWindow.scrollBy({
     top: chatWindow.scrollHeight + 100, // could be negative value
     left: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 }
 
@@ -135,7 +377,7 @@ function hideTypingIndicator() {
 }
 
 function timer(ms) {
-  return new Promise(res => setTimeout(res, ms));
+  return new Promise((res) => setTimeout(res, ms));
 }
 
 /**
@@ -169,8 +411,10 @@ function addButtons(messageContainer, buttons) {
     buttonElem.innerText = buttons[b].display;
     buttonElem.setAttribute(
       "onClick",
-      `sendQuickReply(this, '${escapeStringQuotations(buttons[b].display)}', '${state}')`
-    )
+      `sendQuickReply(this, '${escapeStringQuotations(
+        buttons[b].display
+      )}', '${state}')`
+    );
     buttonElem.setAttribute("state", state);
     buttonContainer.appendChild(buttonElem);
   }
@@ -246,8 +490,10 @@ function closeChat() {
  * @param unformattedString
  */
 function escapeStringQuotations(unformattedString) {
-  const formattedString = unformattedString.toString().replace(new RegExp("'", 'g'), "\\'");
-  return formattedString.replace(new RegExp('"', 'g'), "\\'");
+  const formattedString = unformattedString
+    .toString()
+    .replace(new RegExp("'", "g"), "\\'");
+  return formattedString.replace(new RegExp('"', "g"), "\\'");
 }
 
 /**

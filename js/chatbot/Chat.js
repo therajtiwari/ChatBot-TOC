@@ -21,7 +21,7 @@ class Chat {
   addConversationStep(name, response) {
     const self = this;
 
-    this.add(name, function() {
+    this.add(name, function () {
       self.setResponse(response);
     });
   }
@@ -41,11 +41,11 @@ class Chat {
    */
   pseudoSwitch() {
     if (this.callbacks[this.state]) {
-      this.callbacks[this.state].forEach(function(fn) {
+      this.callbacks[this.state].forEach(function (fn) {
         fn();
       });
     } else {
-      this.callbacks["incomprehension"].forEach(function(fn) {
+      this.callbacks["incomprehension"].forEach(function (fn) {
         fn();
       });
     }

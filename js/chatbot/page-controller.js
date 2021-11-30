@@ -1,25 +1,24 @@
-// initialize variables
-let shadowRootDoc;
+
 const convFlow = [
   {
     id: "greetings",
     response: {
       messages: [
-        "Hi there! Welcome to the digital store.",
-        "You can select from below list of options.",
+        "Hi there! Welcome to DigiStore.",
+        "You can select from the list of options below.",
       ],
       buttons: [
         {
           state: "mainHelp",
-          display: "How can we help you?",
+          display: "I need some help.",
         },
         {
           state: "feeling",
           display: "How are you doing?",
         },
         {
-          state:"creators",
-          display:"Want to lnow more about my creators?",
+          state: "creators",
+          display: "Who are your creators?",
         }
       ],
     },
@@ -51,7 +50,7 @@ const convFlow = [
     id: "creators",
     response: {
       messages: [
-        "Hello visitor, we made this chatbot to assist you in shopping.",
+        "Hello visitor, we made this chatbot to assist you with your shopping.",
         "Trigya Roy, Shrenik Shah & Raj Tiwari. Happy Shopping",
       ],
       buttons: [
@@ -61,7 +60,7 @@ const convFlow = [
         },
         {
           state: "feeling",
-          display: "Know more about me.",
+          display: "Tell me more about you.",
         },
       ],
     },
@@ -85,6 +84,10 @@ const convFlow = [
           state: "earphone",
           display: "Trending Earphones",
         },
+        {
+          state: "goodbye",
+          display: "Goodbye",
+        }
       ],
     },
   },
@@ -144,8 +147,8 @@ const convFlow = [
         },
       ],
     },
-  }, 
-   {
+  },
+  {
     id: "tv3",
     response: {
       messages: [
@@ -216,7 +219,7 @@ const convFlow = [
         },
       ],
     },
-  },  
+  },
   {
     id: "mob3",
     response: {
@@ -285,7 +288,7 @@ const convFlow = [
         },
       ],
     },
-  },  
+  },
   {
     id: "ep3",
     response: {
@@ -301,30 +304,11 @@ const convFlow = [
     },
   },
   {
-    id: "postMore",
+    id: "goodbye",
     response: {
-      messages: ["I'm working on it!", "Select another option"],
+      messages: ["Goodbye! Have a great day", "Thank you for using our chatbot."],
       buttons: [
-        {
-          state: "howOld",
-          display: "How old are you?",
-        },
-        {
-          state: "postMore",
-          display: "Why don't you post more?",
-        },
-      ],
-    },
-  },
-  {
-    id: "incomprehension",
-    response: {
-      messages: ["Sorry didn't understand"],
-      buttons: [
-        {
-          state: "greetings",
-          display: "greetings",
-        },
+
       ],
     },
   },
